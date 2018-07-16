@@ -1,0 +1,89 @@
+ext {
+
+    //Version Android libs
+    versionAndroidSDK = '27.1.1'
+
+    //Version libs
+    def versionButterKnife = '8.8.1'
+    def versionButterKnife_compiler = '8.8.1'
+    def versionRetrofit = '2.4.0'
+    def versionAdapterJavaRetrofit = '2.3.0'
+    def versionLifeCycle='1.1.1'
+    def versionConstraintLayout='1.1.2'
+    def versionJackson = '2.9.5'
+    def versionJacksonAnnot = '2.9.5'
+    def versionJacksonBind = '2.9.5'
+    def versionConverterJackson = '2.3.0'
+    def versionOkHTTP = '3.10.0'
+    def versionGlide = '4.7.1'
+    def versionInterceptor = '3.8.0'
+
+    //Version Test
+    def versionJUnit = '4.12'
+    def versionEspressoCore = '2.2.2'
+
+    //Support Android Libraries Dependencies
+    def androidLibs = [
+            design:             [group: 'com.android.support', name: 'design', version: versionAndroidSDK],
+            recyclerView:       [group: 'com.android.support', name: 'recyclerview-v7', version: versionAndroidSDK],
+            cardView:           [group: 'com.android.support', name: 'cardview-v7', version: versionAndroidSDK],
+            constraint:         [group: 'com.android.support.constraint', name: 'constraint-layout', version: versionConstraintLayout],
+            lifecyle:           [group: 'android.arch.lifecycle', name: 'extensions', version: versionLifeCycle],
+            supportAnnotation:  [group: 'com.android.support', name: 'support-annotations', version: versionAndroidSDK],
+    ]
+
+    //Support Libraries Dependencies
+    def libs = [
+            butterknife:        [group: 'com.jakewharton', name: 'butterknife', version: versionButterKnife],
+            butterKnife_comp:   [group: 'com.jakewharton', name: 'butterknife-compiler', version: versionButterKnife_compiler],
+            butterknifecompiler:[group: 'com.jakewharton', name: 'butterknife-compiler', version: versionButterKnife],
+            jackson:            [group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: versionJackson],
+            jackson_annot:      [group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: versionJacksonAnnot],
+            jackson_databind:   [group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: versionJacksonBind],
+            converter_jackson:  [group: 'com.squareup.retrofit2', name: 'converter-jackson', version: versionConverterJackson],
+            okhttp:             [group: 'com.squareup.okhttp3', name: 'okhttp', version: versionOkHTTP],
+            retrofit:           [group: 'com.squareup.retrofit2', name: 'retrofit', version: versionRetrofit],
+            adapter_java_retr:  [group: 'com.squareup.retrofit2', name: 'adapter-rxjava', version: versionAdapterJavaRetrofit],
+            interceptor:        [group: 'com.squareup.okhttp3', name: 'logging-interceptor', version: versionInterceptor],
+            glide:              [group: 'com.github.bumptech.glide', name: 'glide', version: versionGlide],
+    ]
+
+    //Support Test Libraries Dependencies
+    def testLibs = [
+            junit:              [group: 'junit', name: 'junit', version: versionJUnit],
+            espressoTest:       [group: 'com.android.support.test.espresso', name: 'espresso-core', version: versionEspressoCore]
+    ]
+
+    //Support Modules
+    def modules = [
+            architecture: ':architecture',
+    ]
+
+    appPlugins = [
+            'com.android.application',
+    ]
+
+    appDependencies = [
+            [configuration: "implementation", dependency: androidLibs.recyclerView],
+            [configuration: "implementation", dependency: androidLibs.cardView],
+            [configuration: "implementation", dependency: androidLibs.design],
+            [configuration: "implementation", dependency: androidLibs.supportAnnotation],
+            [configuration: "implementation", dependency: androidLibs.lifecyle],
+            [configuration: "implementation", dependency: androidLibs.constraint],
+            [configuration: "implementation", dependency: libs.retrofit],
+            [configuration: "implementation", dependency: libs.interceptor],
+            [configuration: "implementation", dependency: libs.adapter_java_retr],
+            [configuration: "implementation", dependency: libs.butterknife],
+            [configuration: "implementation", dependency: libs.okhttp],
+            [configuration: "implementation", dependency: libs.converter_jackson],
+            [configuration: "implementation", dependency: libs.jackson],
+            [configuration: "implementation", dependency: libs.glide],
+            [configuration: "implementation", dependency: libs.jackson_annot],
+            [configuration: "implementation", dependency: libs.jackson_databind],
+            [configuration: "annotationProcessor", dependency: libs.butterKnife_comp],
+            [configuration: "implementation", dependency: testLibs.junit],
+            [configuration: "implementation", dependency: project(modules.architecture)],
+            [configuration: "androidTestImplementation", dependency: testLibs.espressoTest,
+             options: { exclude group: 'com.android.support', module: 'support-annotations'}],
+    ]
+}

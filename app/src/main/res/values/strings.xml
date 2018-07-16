@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Teamwork</string>
+    <!-- Main -->
+    <string name="main.title">Teamwork</string>
+    <string name="projects">Projects</string>
+
+    <!-- MainActivity -->
+    <string name="main.status">Status</string>
+
+    <string name="project.name">Name</string>
+    <string name="project.company">Company</string>
+    <string name="project.createdon">Created on: %s</string>
+    <string name="project.createdon_detail">Created on: </string>
+    <string name="project.endDate">End: %s</string>
+    <string name="project.endDate_detail">End:</string>
+    <string name="project.lastchanged">Last changed on: </string>
+
+    <string name="project.active">Active</string>
+    <string name="project.completed">Completed</string>
+    <string name="project.archived">Archived</string>
+    <string name="project.late">Late</string>
+    <string name="project.current">Current</string>
+    <string name="project.all">All</string>
+    <string name="project.none">There are no projects.</string>
+
+    <!--Error -->
+    <string name="error.general">Service not available</string>
+    <string name="error.list">Something went wrong. Try again.</string>
+    <string name="error.conexion">There is not Internet connection.</string>
+    <string name="error.email">Wrong format.</string>
+    <string name="error.mandatory">Necessary field.</string>
+    <string name="error.password">Empty password.</string>
+
+</resources>

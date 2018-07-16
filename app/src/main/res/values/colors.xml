@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1565C0</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorPrimaryDarkSplash">#1E88E5</color>
+    <color name="colorAccent">#2196F3</color>
+    <color name="splash_background">#42A5F5</color>
+    <color name="text_base_color">#F5F2F2</color>
+    <color name="base">#F5F2F2</color>
+
+    <color name="active">#3ADF00</color>
+    <color name="archived">#FF00FF</color>
+    <color name="current">#2E64FE</color>
+    <color name="late">#848484</color>
+    <color name="completed">#F18606</color>
+
+</resources>
